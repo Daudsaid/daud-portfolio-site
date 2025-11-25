@@ -1,0 +1,51 @@
+export const projects = [
+  {
+    title: 'DaudFlix',
+    description: 'Netflix-style streaming experience powered by TMDB with Firebase authentication and curated content rows.',
+    stack: ['React', 'TMDB API', 'Firebase Auth'],
+    liveUrl: 'https://daudflix.vercel.app',
+    githubUrl: 'https://github.com/Daudsaid/Daudflix',
+  },
+  {
+    title: 'EcommerceDaud',
+    description: 'Modern e-commerce frontend with product carousels, category browsing, and a clean checkout concept UI.',
+    stack: ['React', 'Styled Components'],
+    liveUrl: 'https://ecomercedaud.vercel.app',
+    githubUrl: 'https://github.com/Daudsaid/ecommerce-frontend',
+  },
+  {
+    title: 'Payments API',
+    description: 'Payment microservice built with Gin featuring modular domains, validation, and observability-friendly structure.',
+    stack: ['Go (Gin)', 'REST API'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Daudsaid/payments-api',
+  },
+  {
+    title: 'Todo API (Gin)',
+    description: 'CRUD Todo backend service with layered architecture, ready for auth and clean request handling.',
+    stack: ['Go (Gin)', 'REST API'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Daudsaid/todo-api-gin',
+  },
+  {
+    title: 'Expense Tracker API',
+    description: 'Personal expense management API backed by in-memory storage and structured validation for quick prototyping.',
+    stack: ['Go (Gin)', 'In-Memory DB'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Daudsaid/daud-expense-tracker-api',
+  },
+  {
+    title: 'Da-Bank',
+    description: 'Mini banking backend with account flows, JWT authentication, and resilient transaction logic.',
+    stack: ['Go (Gin)', 'JWT', 'In-Memory DB'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Daudsaid/da-bank',
+  },
+  {
+    title: 'Fraud Engine',
+    description: 'Rule-based fraud detection service using Go net/http with in-memory store and risk scoring heuristics.',
+    stack: ['Go (net/http)', 'In-Memory Store', 'Risk Scoring'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Daudsaid/fraud-engine',
+  },
+];

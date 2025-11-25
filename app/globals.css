@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(99, 102, 241, 0.12), transparent 34%),
+    linear-gradient(180deg, #0f172a 0%, #0b1224 40%, #0f172a 100%);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+::selection {
+  background: #0ea5e9;
+  color: #0b1120;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 via-indigo-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:shadow-lg hover:shadow-indigo-200/60;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 shadow-soft transition hover:border-white/40 hover:bg-white/10;
+}
+
+.card {
+  @apply rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft backdrop-blur;
+}
