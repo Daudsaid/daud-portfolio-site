@@ -10,7 +10,7 @@ export const projects = [
     title: 'EcommerceDaud',
     description: 'Modern e-commerce frontend with product carousels, category browsing, and a clean checkout concept UI.',
     stack: ['React', 'Styled Components'],
-    liveUrl: 'https://ecomercedaud.vercel.app',
+    liveUrl: 'https://ecomerce-daud-z9gs.vercel.app/',
     githubUrl: 'https://github.com/Daudsaid/ecommerce-frontend',
   },
   {

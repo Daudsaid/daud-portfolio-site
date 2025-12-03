@@ -87,9 +87,8 @@ export default function Hero() {
               Daud Abdi — building dependable APIs & platforms that ship.
             </h1>
             <p className="max-w-2xl text-base text-slate-200 md:text-lg">
-              Golang backend developer focused on resilient services, clean architecture, and
-              shipping value fast. I blend strong API craftsmanship with a pragmatic,
-              product-minded approach.
+              Golang backend developer focused on resilient services, clean architecture, and shipping value fast. I blend
+              strong API craftsmanship with a pragmatic, product-minded approach.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <a href="#projects" className="btn-primary">

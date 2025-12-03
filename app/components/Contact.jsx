@@ -43,7 +43,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="section-padding relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#0F172A] to-indigo-950 text-white"
+      className="section-padding relative overflow-hidden bg-[#0F172A] text-white"
     >
       <div className="absolute inset-0">
         <div className="absolute left-10 top-10 h-48 w-48 rounded-full bg-sky-500/20 blur-3xl" />

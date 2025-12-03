@@ -35,7 +35,7 @@ export default function ProjectCard({ project, index }) {
           <a
             href={githubUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-2 text-slate-100 transition hover:border-white/40 hover:text-white"
           >
             <FiGithub /> GitHub
@@ -45,7 +45,7 @@ export default function ProjectCard({ project, index }) {
           <a
             href={liveUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 px-3 py-2 text-white shadow-sm transition hover:shadow-md hover:shadow-sky-200/60"
           >
             <FiExternalLink /> Live
