@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function About() {
   const strengths = [
     'Golang (Gin, REST APIs)',
@@ -12,6 +14,16 @@ export default function About() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-sky-100">
           About
+        </div>
+        <div className="mt-6 flex justify-center">
+          <Image
+            src="/profile.jpeg"
+            alt="Daud Abdi portrait"
+            width={160}
+            height={160}
+            className="rounded-full border border-white/20 object-cover shadow-lg"
+            priority
+          />
         </div>
         <h2 className="mt-4 text-3xl font-semibold text-slate-100 md:text-4xl">
           Backend-focused generalist who cares about clean UX.

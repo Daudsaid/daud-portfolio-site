@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
@@ -21,9 +22,19 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0F172A]/90 shadow-sm backdrop-blur-lg">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#hero" className="text-lg font-semibold text-slate-100">
-          Daud Abdi
-          <span className="ml-2 inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500" />
+        <a href="#hero" className="flex items-center gap-3 text-lg font-semibold text-slate-100">
+          <Image
+            src="/profile.jpeg"
+            alt="Daud Abdi"
+            width={40}
+            height={40}
+            className="rounded-full border border-white/20 object-cover"
+            priority
+          />
+          <span className="flex items-center gap-2">
+            Daud Abdi
+            <span className="inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500" />
+          </span>
         </a>
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
