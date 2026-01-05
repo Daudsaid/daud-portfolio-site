@@ -2,43 +2,233 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #0f172a;
-  --foreground: #e2e8f0;
+@layer base {
+  :root {
+    --background: #0a0e1a;
+    --foreground: #e2e8f0;
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background-color: var(--background);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(59, 130, 246, 0.15), transparent 35%),
+      radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.12), transparent 40%),
+      radial-gradient(circle at 40% 90%, rgba(99, 102, 241, 0.1), transparent 45%),
+      linear-gradient(180deg, #0a0e1a 0%, #0f172a 40%, #0a0e1a 100%);
+    background-attachment: fixed;
+    color: var(--foreground);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3b82f6, #06b6d4);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #2563eb, #0891b2);
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: #ffffff;
+  }
+
+  ::-moz-selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: #ffffff;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border-2 border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/10;
+  }
+
+  .card {
+    @apply rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-xl transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-2 hover:border-white/20 hover:shadow-blue-500/20;
+  }
+
+  .glass {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent;
+  }
+
+  .shadow-soft {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 0 20px -5px rgba(59, 130, 246, 0.1);
+  }
+
+  .shadow-glow-blue {
+    box-shadow: 0 0 30px -5px rgba(59, 130, 246, 0.3);
+  }
+
+  .shadow-glow-cyan {
+    box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.3);
+  }
 }
 
-body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #0f172a;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.12), transparent 30%),
-    radial-gradient(circle at 80% 0%, rgba(99, 102, 241, 0.12), transparent 34%),
-    linear-gradient(180deg, #0f172a 0%, #0f172a 40%, #0f172a 100%);
-  color: var(--foreground);
-  min-height: 100vh;
+@layer utilities {
+  /* Animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s linear infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+
+  .delay-2000 {
+    animation-delay: 2s;
+  }
+
+  /* Grid pattern background */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Gradient borders */
+  .border-gradient {
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+
+  .border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  /* Text shimmer effect */
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      #94a3b8 0%,
+      #ffffff 50%,
+      #94a3b8 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* Blur backdrop utilities */
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+
+  .backdrop-blur-3xl {
+    backdrop-filter: blur(64px);
+  }
 }
 
-::selection {
-  background: #0ea5e9;
-  color: #0b1120;
+/* Custom focus styles */
+@layer base {
+  *:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-[#0f172a];
+  }
 }
 
-.section-padding {
-  @apply py-16 md:py-24;
-}
-
-.btn-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 via-indigo-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:shadow-lg hover:shadow-indigo-200/60;
-}
-
-.btn-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 shadow-soft transition hover:border-white/40 hover:bg-white/10;
-}
-
-.card {
-  @apply rounded-3xl border border-white/10 bg-white/5 p-6 shadow-soft backdrop-blur;
+/* Smooth transitions for all interactive elements */
+@layer base {
+  a, button {
+    @apply transition-all duration-300;
+  }
 }

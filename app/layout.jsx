@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 export const metadata = {
-  title: 'Daud Abdi | Golang Backend Developer',
-  description: 'Portfolio website for Daud Abdi, Golang backend developer building APIs, microservices, and full-stack apps.',
+  title: 'Daud Abdi | TypeScript & Go Software Engineer',
+  description: 'Software engineer specializing in TypeScript and Go. Building scalable backend systems, microservices, and full-stack applications with modern architecture and production-grade reliability.',
 };
 
 export default function RootLayout({ children }) {

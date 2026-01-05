@@ -1,22 +1,38 @@
 export const skills = [
   {
+    category: 'Languages',
+    items: ['TypeScript', 'Go', 'JavaScript', 'SQL'],
+    icon: '💻',
+    color: 'blue',
+  },
+  {
     category: 'Backend',
-    items: ['Go', 'Gin', 'REST APIs'],
+    items: ['Node.js', 'Express', 'Gin Framework', 'REST APIs', 'Microservices'],
+    icon: '⚙️',
+    color: 'cyan',
   },
   {
     category: 'Frontend',
-    items: ['React', 'Next.js', 'JavaScript'],
+    items: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+    icon: '🎨',
+    color: 'indigo',
   },
   {
-    category: 'Databases',
-    items: ['PostgreSQL', 'MySQL'],
+    category: 'Database',
+    items: ['PostgreSQL', 'MySQL', 'Database Design', 'Query Optimization'],
+    icon: '🗄️',
+    color: 'purple',
   },
   {
-    category: 'Tools',
-    items: ['Git', 'Docker', 'Linux', 'Postman'],
+    category: 'DevOps & Tools',
+    items: ['Docker', 'Git', 'Linux', 'CI/CD', 'Postman'],
+    icon: '🛠️',
+    color: 'green',
   },
   {
-    category: 'Other',
-    items: ['Tailwind CSS', 'VS Code', 'Cursor', 'GitHub Copilot'],
+    category: 'Architecture',
+    items: ['Clean Architecture', 'Domain-Driven Design', 'API Design', 'Testing'],
+    icon: '🏗️',
+    color: 'orange',
   },
 ];
