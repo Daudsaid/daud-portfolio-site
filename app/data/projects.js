@@ -1,5 +1,23 @@
 export const projects = [
   {
+    title: 'JWT Authentication API (TypeScript)',
+    description: 'Type-safe authentication REST API with Express.js, TypeScript, and PostgreSQL. Features user registration, JWT-based login, protected routes, bcrypt password hashing, and comprehensive type definitions for production-ready security.',
+    stack: ['TypeScript', 'Express.js', 'PostgreSQL', 'JWT', 'bcrypt'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Daudsaid/auth-api-typescript',
+    category: 'Backend',
+    featured: true,
+  },
+  {
+    title: 'JWT Authentication API (JavaScript)',
+    description: 'Secure authentication microservice built with Express.js and PostgreSQL. Implements industry-standard JWT authentication flow with password hashing, protected routes, and parameterized SQL queries for security.',
+    stack: ['JavaScript', 'Express.js', 'PostgreSQL', 'JWT', 'bcrypt'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Daudsaid/auth-api-javascript',
+    category: 'Backend',
+    featured: true,
+  },
+  {
     title: 'Payments API',
     description: 'Production-ready payment microservice built with Go and Gin framework. Features modular domain architecture, comprehensive validation, structured logging, and observability-friendly design for enterprise use.',
     stack: ['Go', 'Gin Framework', 'REST API', 'Microservices'],
