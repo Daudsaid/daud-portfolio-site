@@ -4,7 +4,12 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
-const links = [
+interface NavLink {
+  label: string;
+  href: string;
+}
+
+const links: NavLink[] = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },

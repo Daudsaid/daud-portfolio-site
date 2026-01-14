@@ -1,4 +1,11 @@
-const experience = [
+interface ExperienceItem {
+  role: string;
+  company: string;
+  period: string;
+  bullets: string[];
+}
+
+const experience: ExperienceItem[] = [
   {
     role: 'Software Engineer (Freelance)',
     company: 'Upwork & Indie Clients',

@@ -3,8 +3,22 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+interface Highlight {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface Technologies {
+  primary: string[];
+  frontend: string[];
+  backend: string[];
+  database: string[];
+  tools: string[];
+}
+
 export default function About() {
-  const highlights = [
+  const highlights: Highlight[] = [
     {
       title: 'Backend Architecture',
       description: 'Microservices & REST APIs with Go and Node.js',
@@ -27,7 +41,7 @@ export default function About() {
     },
   ];
 
-  const technologies = {
+  const technologies: Technologies = {
     primary: ['TypeScript', 'Go', 'Node.js'],
     frontend: ['React', 'Next.js', 'Tailwind CSS'],
     backend: ['Express', 'Gin Framework', 'REST APIs'],

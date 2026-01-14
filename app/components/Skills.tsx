@@ -3,7 +3,14 @@
 import { motion } from 'framer-motion';
 import { skills } from '../data/skills';
 
-const colorClasses = {
+interface ColorClasses {
+  border: string;
+  bg: string;
+  text: string;
+  glow: string;
+}
+
+const colorClasses: Record<string, ColorClasses> = {
   blue: {
     border: 'border-blue-400/30',
     bg: 'bg-blue-500/10',

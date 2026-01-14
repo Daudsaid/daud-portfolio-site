@@ -1,4 +1,11 @@
-export const skills = [
+export interface Skill {
+  category: string;
+  items: string[];
+  icon: string;
+  color: string;
+}
+
+export const skills: Skill[] = [
   {
     category: 'Languages',
     items: ['TypeScript', 'Go', 'JavaScript', 'SQL'],

@@ -1,9 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { IconType } from 'react-icons';
 
-const SOCIAL_LINKS = [
+interface SocialLink {
+  icon: IconType;
+  label: string;
+  href: string;
+  text: string;
+}
+
+interface FormState {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: FaEnvelope,
     label: 'Email',
@@ -25,16 +39,16 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [form, setForm] = useState<FormState>({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (event) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     if (submitted) setSubmitted(false);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Here you could later integrate with an API / form service.
     setSubmitted(true);

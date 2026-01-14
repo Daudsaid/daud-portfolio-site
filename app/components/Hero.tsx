@@ -4,9 +4,16 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiTypescript, SiGo, SiDocker, SiPostgresql, SiReact, SiNodedotjs } from 'react-icons/si';
+import { IconType } from 'react-icons';
+
+interface TechItem {
+  icon: IconType;
+  name: string;
+  color: string;
+}
 
 export default function Hero() {
-  const techStack = [
+  const techStack: TechItem[] = [
     { icon: SiTypescript, name: 'TypeScript', color: 'text-blue-400' },
     { icon: SiGo, name: 'Go', color: 'text-cyan-400' },
     { icon: SiNodedotjs, name: 'Node.js', color: 'text-green-400' },

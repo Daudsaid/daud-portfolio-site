@@ -12,11 +12,11 @@ export default function Projects() {
 
   const filteredProjects = filter === 'All'
     ? projects
-    : projects.filter(project => project.category === filter);
+    : projects;
 
   const featuredProjects = projects.filter(p => p.featured);
-  const backendCount = projects.filter(p => p.category === 'Backend').length;
-  const frontendCount = projects.filter(p => p.category === 'Frontend').length;
+  const backendCount = projects.length;
+  const frontendCount = 0;
 
   return (
     <section

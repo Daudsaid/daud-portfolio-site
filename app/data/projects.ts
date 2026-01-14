@@ -1,4 +1,15 @@
-export const projects = [
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  github: string;
+  demo: string | null;
+  featured: boolean;
+}
+
+export const projects: Project[] = [
   {
     id: 1,
     title: "Advanced Authentication & Authorization API",

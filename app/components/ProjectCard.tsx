@@ -2,23 +2,36 @@
 
 import { motion } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { Project } from '../data/projects';
 
-export default function ProjectCard({ project, index }) {
-  const { title, description, stack, liveUrl, githubUrl, category, featured } = project;
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
 
-  const categoryColors = {
-    Backend: {
-      badge: 'border-blue-400/30 bg-blue-500/10 text-blue-300',
-      glow: 'bg-blue-500/20',
-      hover: 'hover:shadow-blue-500/30',
-    },
-    Frontend: {
-      badge: 'border-cyan-400/30 bg-cyan-500/10 text-cyan-300',
-      glow: 'bg-cyan-500/20',
-      hover: 'hover:shadow-cyan-500/30',
-    },
-  };
+interface CategoryColors {
+  badge: string;
+  glow: string;
+  hover: string;
+}
 
+const categoryColors: Record<string, CategoryColors> = {
+  Backend: {
+    badge: 'border-blue-400/30 bg-blue-500/10 text-blue-300',
+    glow: 'bg-blue-500/20',
+    hover: 'hover:shadow-blue-500/30',
+  },
+  Frontend: {
+    badge: 'border-cyan-400/30 bg-cyan-500/10 text-cyan-300',
+    glow: 'bg-cyan-500/20',
+    hover: 'hover:shadow-cyan-500/30',
+  },
+};
+
+export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const { title, description, tags, demo, github, featured } = project;
+
+  const category = 'Backend';
   const colors = categoryColors[category] || categoryColors.Backend;
 
   return (
@@ -62,7 +75,7 @@ export default function ProjectCard({ project, index }) {
 
         {/* Tech stack */}
         <div className="mb-6 flex flex-wrap gap-2">
-          {stack.map((tech) => (
+          {tags.map((tech) => (
             <span
               key={tech}
               className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-sm font-medium text-slate-200 backdrop-blur-sm transition-all duration-200 hover:border-white/30 hover:bg-white/10"
@@ -75,9 +88,9 @@ export default function ProjectCard({ project, index }) {
 
         {/* Links */}
         <div className="mt-auto flex items-center gap-3 pt-6 border-t border-white/10">
-          {githubUrl && (
+          {github && (
             <a
-              href={githubUrl}
+              href={github}
               target="_blank"
               rel="noopener noreferrer"
               className="group/link inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-semibold text-slate-200 backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/10 hover:text-white hover:scale-105"
@@ -86,9 +99,9 @@ export default function ProjectCard({ project, index }) {
               Source Code
             </a>
           )}
-          {liveUrl && (
+          {demo && (
             <a
-              href={liveUrl}
+              href={demo}
               target="_blank"
               rel="noopener noreferrer"
               className="group/link inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/60 hover:scale-105"
