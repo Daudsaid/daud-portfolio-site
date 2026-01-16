@@ -55,7 +55,7 @@ export default function Projects() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-sm">
               <span className="text-2xl font-bold text-blue-400">{backendCount}</span>
-              <span className="ml-2 text-sm text-slate-400">Go Backend APIs</span>
+              <span className="ml-2 text-sm text-slate-400">Backend APIs</span>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-sm">
               <span className="text-2xl font-bold text-cyan-400">{frontendCount}</span>

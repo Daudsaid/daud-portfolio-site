@@ -12,6 +12,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "Payments API with Stripe Integration",
+    description: "Production-ready RESTful API with complete Stripe payment processing, secure webhook handling with SHA-256 signature verification, and comprehensive test coverage (38+ passing tests). Features Payment Intents, customer management, refunds, and CSRF protection.",
+    image: "/api-placeholder.jpg",
+    tags: ["TypeScript", "Express.js", "PostgreSQL", "Stripe", "Jest", "Webhooks"],
+    github: "https://github.com/Daudsaid/payments-api-da-ts",
+    demo: null,
+    featured: true
+  },
+  {
+    id: 2,
     title: "OAuth Login API",
     description: "Production-ready OAuth authentication API with Google and GitHub login support. Features session management with HttpOnly cookies, CSRF protection, rate limiting, and comprehensive test coverage with 38 passing tests.",
     image: "/api-placeholder.jpg",
@@ -21,7 +31,7 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: 2,
+    id: 3,
     title: "Advanced Authentication & Authorization API",
     description: "Production-ready REST API with JWT authentication, refresh tokens, RBAC, email verification, and password reset. Includes comprehensive test coverage with Jest.",
     image: "/api-placeholder.jpg",
@@ -31,7 +41,7 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "JWT Authentication API (TypeScript)",
     description: "Secure authentication API with JWT tokens, user registration, login, and protected routes. Built with TypeScript for type safety.",
     image: "/api-placeholder.jpg",
@@ -41,7 +51,7 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     title: "JWT Authentication API (JavaScript)",
     description: "RESTful authentication API featuring JWT token-based authentication, bcrypt password hashing, and PostgreSQL database integration.",
     image: "/api-placeholder.jpg",
@@ -51,7 +61,7 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: 5,
+    id: 6,
     title: "Budgeting API",
     description: "RESTful API for budget management with full CRUD operations for budgets, income, and expenses tracking.",
     image: "/api-placeholder.jpg",
@@ -61,7 +71,7 @@ export const projects: Project[] = [
     featured: false
   },
   {
-    id: 6,
+    id: 7,
     title: "Expense Tracker API",
     description: "Backend API for tracking expenses with category management and full CRUD functionality.",
     image: "/api-placeholder.jpg",
