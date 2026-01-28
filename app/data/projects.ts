@@ -79,5 +79,15 @@ export const projects: Project[] = [
     github: "https://github.com/Daudsaid/expense-tracker-api",
     demo: null,
     featured: false
+  },
+  {
+    id: 8,
+    title: "TypeScript by Example",
+    description: "Interactive learning resource for mastering TypeScript through practical, hands-on examples. Covers core concepts, type system, generics, and advanced patterns with live code demonstrations.",
+    image: "/api-placeholder.jpg",
+    tags: ["TypeScript", "JavaScript", "Education"],
+    github: "https://github.com/Daudsaid/typescript-by-example",
+    demo: "https://tsc-by-example.vercel.app",
+    featured: true
   }
 ];
