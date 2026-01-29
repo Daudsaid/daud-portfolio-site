@@ -89,5 +89,25 @@ export const projects: Project[] = [
     github: "https://github.com/Daudsaid/typescript-by-example",
     demo: "https://tsc-by-example.vercel.app",
     featured: true
+  },
+  {
+    id: 9,
+    title: "E-Commerce Store",
+    description: "Full-featured e-commerce application with product browsing, shopping cart, user authentication, and checkout functionality. Built with modern React patterns and responsive design.",
+    image: "/api-placeholder.jpg",
+    tags: ["React", "TypeScript", "Tailwind CSS", "E-Commerce"],
+    github: "https://github.com/Daudsaid/ecommerce-daud",
+    demo: "https://ecomerce-daud-z9gs.vercel.app",
+    featured: true
+  },
+  {
+    id: 10,
+    title: "Daudflix",
+    description: "Netflix clone featuring user authentication, movie browsing, and streaming UI. Includes responsive design, dynamic content loading, and modern user interface inspired by Netflix.",
+    image: "/api-placeholder.jpg",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
+    github: "https://github.com/Daudsaid/daudflix",
+    demo: "https://daudflix.vercel.app",
+    featured: true
   }
 ];
