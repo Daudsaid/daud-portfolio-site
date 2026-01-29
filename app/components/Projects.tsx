@@ -10,13 +10,19 @@ export default function Projects() {
 
   const categories = ['All', 'Backend', 'Frontend'];
 
+  // Categorize projects: Backend if has "API" in title or "Express.js" in tags
+  const isBackend = (project: typeof projects[0]) =>
+    project.title.toLowerCase().includes('api') || project.tags.includes('Express.js');
+
   const filteredProjects = filter === 'All'
     ? projects
-    : projects;
+    : filter === 'Backend'
+    ? projects.filter(isBackend)
+    : projects.filter(p => !isBackend(p));
 
   const featuredProjects = projects.filter(p => p.featured);
-  const backendCount = projects.length;
-  const frontendCount = 0;
+  const backendCount = projects.filter(isBackend).length;
+  const frontendCount = projects.filter(p => !isBackend(p)).length;
 
   return (
     <section
