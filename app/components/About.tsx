@@ -20,33 +20,33 @@ interface Technologies {
 export default function About() {
   const highlights: Highlight[] = [
     {
-      title: 'Backend Architecture',
-      description: 'Microservices & REST APIs with Go and Node.js',
-      icon: '🏗️',
+      title: 'Data Pipeline Development',
+      description: 'End-to-end pipelines from ingestion to analytics with Python & dbt',
+      icon: '🔄',
     },
     {
-      title: 'Type Safety',
-      description: 'TypeScript-first development for robust applications',
-      icon: '🔒',
+      title: 'dbt & Snowflake',
+      description: 'SCD Type 2 snapshots, dbt models and tests, dual-target deployments',
+      icon: '❄️',
     },
     {
-      title: 'Database Design',
-      description: 'PostgreSQL & MySQL optimization and schema design',
-      icon: '🗄️',
+      title: 'Airflow Orchestration',
+      description: 'DAG-based pipeline orchestration with Docker Compose deployments',
+      icon: '🌬️',
     },
     {
-      title: 'DevOps & Cloud',
-      description: 'Docker containers and cloud-native deployments',
-      icon: '☁️',
+      title: 'Backend APIs',
+      description: 'Production-grade REST APIs with TypeScript, Node.js, and PostgreSQL',
+      icon: '⚙️',
     },
   ];
 
   const technologies: Technologies = {
-    primary: ['TypeScript', 'Go', 'Node.js'],
+    primary: ['Python', 'TypeScript', 'SQL'],
     frontend: ['React', 'Next.js', 'Tailwind CSS'],
-    backend: ['Express', 'Gin Framework', 'REST APIs'],
-    database: ['PostgreSQL', 'MySQL'],
-    tools: ['Docker', 'Git', 'Linux', 'Postman'],
+    backend: ['dbt', 'Apache Airflow', 'Snowflake', 'PostgreSQL', 'REST APIs'],
+    database: ['PostgreSQL', 'Snowflake', 'AWS S3'],
+    tools: ['Docker', 'Git', 'AWS Glue', 'AWS Athena', 'Parquet'],
   };
 
   return (
@@ -73,10 +73,10 @@ export default function About() {
             </span>
           </div>
           <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
-            Crafting Elegant Solutions
+            Engineering Data at Scale
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
-            Passionate about building scalable systems with clean architecture and type-safe code
+            Passionate about building scalable pipelines with clean architecture and production-grade reliability
           </p>
         </motion.div>
 
@@ -107,18 +107,20 @@ export default function About() {
             {/* Description */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                Software Engineer specializing in TypeScript & Go
+                Backend & Data Engineer specializing in Python & dbt
               </h3>
               <div className="space-y-4 text-slate-300">
                 <p className="leading-relaxed">
-                  I&apos;m a software engineer focused on building robust backend systems and modern full-stack
-                  applications. With expertise in TypeScript and Go, I create scalable microservices,
-                  REST APIs, and cloud-native solutions that prioritize performance and maintainability.
+                  I&apos;m a Backend & Data Engineer based in London, building end-to-end data pipelines
+                  and backend systems. My DE work spans Python ingestion scripts, dbt transformations
+                  (SCD Type 2, snapshots, tests), Airflow orchestration, and dual-target deployments to
+                  both PostgreSQL and Snowflake.
                 </p>
                 <p className="leading-relaxed">
-                  My approach combines clean architecture, strong type safety, and comprehensive testing
-                  to deliver production-ready features. I believe in writing code that&apos;s not just functional,
-                  but elegant, maintainable, and built to scale.
+                  I bring a full-stack TypeScript/Node.js background to every project — meaning I
+                  understand the systems that produce the data, not just the pipelines that move it.
+                  My approach is hands-on and production-focused: real APIs, real databases, real
+                  orchestration, clean architecture.
                 </p>
               </div>
 
@@ -126,11 +128,11 @@ export default function About() {
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
                   <p className="text-3xl font-bold text-blue-400">15+</p>
-                  <p className="text-sm text-slate-400">Projects Completed</p>
+                  <p className="text-sm text-slate-400">Projects</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                  <p className="text-3xl font-bold text-cyan-400">10+</p>
-                  <p className="text-sm text-slate-400">Technologies</p>
+                  <p className="text-3xl font-bold text-cyan-400">2 Yrs</p>
+                  <p className="text-sm text-slate-400">Experience</p>
                 </div>
               </div>
             </div>
@@ -224,7 +226,7 @@ export default function About() {
                 {/* Database & Tools */}
                 <div>
                   <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    Database & Tools
+                    Database & Cloud
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {[...technologies.database, ...technologies.tools].map((tech) => (

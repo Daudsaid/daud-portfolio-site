@@ -77,7 +77,7 @@ export default function Skills() {
             Tech Stack & Expertise
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
-            Modern technologies and tools for building scalable, production-ready applications
+            Modern data and backend technologies for building scalable, production-ready pipelines and systems
           </p>
         </motion.div>
 

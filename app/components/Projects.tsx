@@ -8,21 +8,15 @@ import { projects } from '../data/projects';
 export default function Projects() {
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Backend', 'Frontend'];
-
-  // Categorize projects: Backend if has "API" in title or "Express.js" in tags
-  const isBackend = (project: typeof projects[0]) =>
-    project.title.toLowerCase().includes('api') || project.tags.includes('Express.js');
+  const categories = ['All', 'Data Engineering', 'Backend', 'Frontend'];
 
   const filteredProjects = filter === 'All'
     ? projects
-    : filter === 'Backend'
-    ? projects.filter(isBackend)
-    : projects.filter(p => !isBackend(p));
+    : projects.filter(p => p.category === filter);
 
   const featuredProjects = projects.filter(p => p.featured);
-  const backendCount = projects.filter(isBackend).length;
-  const frontendCount = projects.filter(p => !isBackend(p)).length;
+  const deCount = projects.filter(p => p.category === 'Data Engineering').length;
+  const frontendCount = projects.filter(p => p.category === 'Frontend').length;
 
   return (
     <section
@@ -54,14 +48,14 @@ export default function Projects() {
             Projects & Case Studies
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
-            Real-world applications showcasing backend microservices, APIs, and modern frontend experiences
+            Real-world data pipelines and backend systems built for production
           </p>
 
           {/* Stats */}
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-sm">
-              <span className="text-2xl font-bold text-blue-400">{backendCount}</span>
-              <span className="ml-2 text-sm text-slate-400">Backend APIs</span>
+              <span className="text-2xl font-bold text-blue-400">{deCount}</span>
+              <span className="ml-2 text-sm text-slate-400">DE Pipelines</span>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-sm">
               <span className="text-2xl font-bold text-cyan-400">{frontendCount}</span>

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiTypescript, SiGo, SiDocker, SiPostgresql, SiReact, SiNodedotjs } from 'react-icons/si';
+import { SiPython, SiTypescript, SiSnowflake, SiPostgresql, SiDocker, SiApacheairflow } from 'react-icons/si';
 import { IconType } from 'react-icons';
 
 interface TechItem {
@@ -14,12 +14,12 @@ interface TechItem {
 
 export default function Hero() {
   const techStack: TechItem[] = [
-    { icon: SiTypescript, name: 'TypeScript', color: 'text-blue-400' },
-    { icon: SiGo, name: 'Go', color: 'text-cyan-400' },
-    { icon: SiNodedotjs, name: 'Node.js', color: 'text-green-400' },
-    { icon: SiReact, name: 'React', color: 'text-sky-400' },
+    { icon: SiPython, name: 'Python', color: 'text-yellow-400' },
+    { icon: SiApacheairflow, name: 'Airflow', color: 'text-green-400' },
+    { icon: SiSnowflake, name: 'Snowflake', color: 'text-cyan-400' },
     { icon: SiPostgresql, name: 'PostgreSQL', color: 'text-blue-300' },
     { icon: SiDocker, name: 'Docker', color: 'text-blue-500' },
+    { icon: SiTypescript, name: 'TypeScript', color: 'text-blue-400' },
   ];
 
   return (
@@ -65,14 +65,13 @@ export default function Hero() {
               {/* Main heading */}
               <div className="space-y-6">
                 <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-                  <span className="block">Software Engineer</span>
+                  <span className="block">Backend & Data</span>
                   <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    TypeScript & Go
+                    Engineer
                   </span>
                 </h1>
                 <p className="max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-                  Building scalable backend systems and modern full-stack applications with clean architecture,
-                  strong type safety, and production-grade reliability.
+                  Building production-grade data pipelines and backend systems — from ingestion to analytics — using Python, dbt, Airflow, Snowflake, and SQL, with a full-stack TypeScript background.
                 </p>
               </div>
 
@@ -162,7 +161,7 @@ export default function Hero() {
                   </div>
                   <div className="text-center">
                     <h3 className="text-2xl font-bold text-white">Daud Abdi</h3>
-                    <p className="text-sm text-slate-300">Software Engineer</p>
+                    <p className="text-sm text-slate-300">Backend & Data Engineer</p>
                   </div>
                 </div>
 
@@ -171,7 +170,7 @@ export default function Hero() {
                   {[
                     { label: 'Projects', value: '15+', icon: '🚀' },
                     { label: 'Experience', value: '2 Yrs', icon: '⚡' },
-                    { label: 'Tech Stack', value: '10+', icon: '🛠️' },
+                    { label: 'DE & Backend Tools', value: '10+', icon: '🛠️' },
                   ].map((stat) => (
                     <div
                       key={stat.label}
@@ -194,10 +193,10 @@ export default function Hero() {
                   </div>
                   <div className="space-y-3">
                     {[
-                      'Backend microservices & REST APIs',
-                      'Type-safe full-stack development',
-                      'Database design & optimization',
-                      'Cloud-native deployments',
+                      'End-to-end data pipeline development',
+                      'dbt modelling, testing & Snowflake deployment',
+                      'Airflow orchestration & Docker containerisation',
+                      'Backend APIs & full-stack TypeScript systems',
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3">
                         <svg
