@@ -7,8 +7,8 @@ interface ExperienceItem {
 
 const experience: ExperienceItem[] = [
   {
-    role: 'Software Engineer (Freelance)',
-    company: 'Upwork & Indie Clients',
+    role: 'Software Engineer (Freelance)', 
+     company: 'Upwork & Indie Clients',
     period: '2024 — Present',
     bullets: [
       'Delivered Go-based APIs, dashboards, and deployment-ready infrastructure guidance for startups.',

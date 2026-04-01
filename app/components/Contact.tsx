@@ -41,6 +41,8 @@ const SOCIAL_LINKS: SocialLink[] = [
 export default function Contact() {
   const [form, setForm] = useState<FormState>({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
@@ -48,10 +50,27 @@ export default function Contact() {
     if (submitted) setSubmitted(false);
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Here you could later integrate with an API / form service.
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setError('Something went wrong. Please email me directly.');
+      }
+    } catch {
+      setError('Something went wrong. Please email me directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -74,8 +93,8 @@ export default function Contact() {
             Let&apos;s build something together
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-slate-200 sm:text-base">
-            Whether you&apos;re looking for a backend engineer for your next product, need help with a Go
-            API, or just want to discuss an idea, feel free to reach out. I usually reply within 24 hours.
+            Whether you&apos;re looking for a data engineer or backend engineer for your next product, or
+            just want to discuss an idea, feel free to reach out. I usually reply within 24 hours.
           </p>
 
           <div className="mt-8 space-y-3 text-sm text-slate-200">
@@ -156,19 +175,21 @@ export default function Contact() {
             <button
               type="submit"
               className="btn-primary mt-2 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 disabled:cursor-not-allowed disabled:opacity-60"
-              disabled={submitted}
+              disabled={loading || submitted}
             >
-              {submitted ? 'Message sent (demo)' : 'Send message'}
+              {loading ? 'Sending...' : submitted ? 'Message sent! ✓' : 'Send message'}
             </button>
 
-            <p
-              className="text-center text-xs text-slate-200/80"
-              aria-live="polite"
-            >
-              {submitted
-                ? 'Thanks for reaching out! This form is a front-end demo — for real inquiries, email me directly.'
-                : 'This form is a demo. For urgent requests, email me directly.'}
-            </p>
+            {submitted && (
+              <p className="text-center text-xs text-slate-200/80" aria-live="polite">
+                Message sent! I&apos;ll get back to you within 24 hours.
+              </p>
+            )}
+            {error && (
+              <p className="text-center text-xs text-rose-400" aria-live="polite">
+                {error}
+              </p>
+            )}
           </form>
         </div>
       </div>

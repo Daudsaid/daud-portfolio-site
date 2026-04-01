@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiPython, SiTypescript, SiSnowflake, SiPostgresql, SiDocker, SiApacheairflow } from 'react-icons/si';
 import { IconType } from 'react-icons';
+import ViewCounter from './ViewCounter';
 
 interface TechItem {
   icon: IconType;
@@ -94,6 +95,9 @@ export default function Hero() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* View counter */}
+              <ViewCounter />
 
               {/* CTA Buttons */}
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
