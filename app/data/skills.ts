@@ -14,13 +14,13 @@ export const skills: Skill[] = [
   },
   {
     category: 'Data Engineering',
-    items: ['dbt', 'Apache Airflow', 'PySpark', 'Pandas', 'Parquet'],
+    items: ['dbt', 'Apache Airflow', 'Apache Kafka', 'PySpark', 'Pandas', 'Parquet', 'Delta Lake'],
     icon: '⚙️',
     color: 'cyan',
   },
   {
     category: 'Cloud & Warehousing',
-    items: ['Snowflake', 'AWS S3', 'AWS Glue', 'AWS Athena'],
+    items: ['Snowflake', 'Databricks', 'AWS S3', 'AWS Glue', 'AWS Athena'],
     icon: '☁️',
     color: 'indigo',
   },
@@ -32,7 +32,7 @@ export const skills: Skill[] = [
   },
   {
     category: 'Backend & APIs',
-    items: ['Node.js', 'Express', 'REST APIs', 'JWT', 'OAuth 2.0'],
+    items: ['Node.js', 'Express', 'FastAPI', 'REST APIs', 'JWT', 'OAuth 2.0'],
     icon: '🔧',
     color: 'green',
   },
