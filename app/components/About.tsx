@@ -94,7 +94,7 @@ export default function About() {
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 blur-2xl opacity-50" />
               <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white/20 shadow-2xl">
                 <Image
-                  src="/profile.jpeg"
+                  src="/daud2.jpeg"
                   alt="Daud Abdi"
                   fill
                   sizes="192px"
@@ -107,7 +107,7 @@ export default function About() {
             {/* Description */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                Backend & Data Engineer specializing in Python & dbt
+                Backend & Data Engineer
               </h3>
               <div className="space-y-4 text-slate-300">
                 <p className="leading-relaxed">
