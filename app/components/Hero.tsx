@@ -155,7 +155,7 @@ export default function Hero() {
                     <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 blur-xl opacity-75" />
                     <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-white/20 shadow-xl">
                       <Image
-                        src="/daud1.jpeg"
+                        src="/daud2.jpeg"
                         alt="Daud Abdi"
                         fill
                         sizes="128px"

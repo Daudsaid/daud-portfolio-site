@@ -52,7 +52,7 @@ export default function Navbar() {
             <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 blur transition-opacity duration-300 group-hover:opacity-75" />
             <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-white/20 shadow-lg transition-all duration-300 group-hover:border-white/40">
               <Image
-                src="/daud1.jpeg"
+                src="/daud2.jpeg"
                 alt="Daud Abdi"
                 fill
                 sizes="40px"

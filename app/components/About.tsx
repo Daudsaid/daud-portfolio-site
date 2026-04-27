@@ -153,6 +153,7 @@ export default function About() {
                   key={item.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+    
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:bg-white/10 hover:scale-105"
