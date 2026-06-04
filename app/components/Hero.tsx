@@ -66,13 +66,13 @@ export default function Hero() {
               {/* Main heading */}
               <div className="space-y-6">
                 <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-                  <span className="block">Backend & Data</span>
+                  <span className="block">Data</span>
                   <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     Engineer
                   </span>
                 </h1>
                 <p className="max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-                  Building production-grade data pipelines and backend systems — from ingestion to analytics — using Python, dbt, Airflow, Snowflake, and SQL, with a full-stack TypeScript background.
+                  Data Engineer building production pipelines from ingestion to analytics — with a backend engineering background that means I design for data quality and schema contracts at the source, not just in the warehouse.
                 </p>
               </div>
 
@@ -98,6 +98,11 @@ export default function Hero() {
 
               {/* View counter */}
               <ViewCounter />
+
+              {/* Work eligibility */}
+              <p className="text-sm text-slate-400">
+                London-based · no sponsorship required (EU Settlement Scheme)
+              </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -165,16 +170,16 @@ export default function Hero() {
                   </div>
                   <div className="text-center">
                     <h3 className="text-2xl font-bold text-white">Daud Abdi</h3>
-                    <p className="text-sm text-slate-300">Backend & Data Engineer</p>
+                    <p className="text-sm text-slate-300">Data Engineer</p>
                   </div>
                 </div>
 
                 {/* Stats grid */}
                 <div className="mb-6 grid grid-cols-3 gap-4">
                   {[
-                    { label: 'Projects', value: '15+', icon: '🚀' },
-                    { label: 'Experience', value: '2 Yrs', icon: '⚡' },
-                    { label: 'DE & Backend Tools', value: '10+', icon: '🛠️' },
+                    { label: 'Projects', value: '12', icon: '🚀' },
+                    { label: 'DE Pipelines', value: '8', icon: '⚡' },
+                    { label: 'Experience', value: '2 Yrs', icon: '🛠️' },
                   ].map((stat) => (
                     <div
                       key={stat.label}

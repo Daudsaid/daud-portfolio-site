@@ -107,11 +107,11 @@ export default function About() {
             {/* Description */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                Backend & Data Engineer
+                Data Engineer
               </h3>
               <div className="space-y-4 text-slate-300">
                 <p className="leading-relaxed">
-                  I&apos;m a Backend & Data Engineer based in London, building end-to-end data pipelines
+                  I&apos;m a Data Engineer based in London, building end-to-end data pipelines
                   and backend systems. My DE work spans Python ingestion scripts, dbt transformations
                   (SCD Type 2, snapshots, tests), Airflow orchestration, and dual-target deployments to
                   both PostgreSQL and Snowflake.
@@ -127,7 +127,7 @@ export default function About() {
               {/* Quick stats */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                  <p className="text-3xl font-bold text-blue-400">15+</p>
+                  <p className="text-3xl font-bold text-blue-400">12</p>
                   <p className="text-sm text-slate-400">Projects</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">

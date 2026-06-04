@@ -66,7 +66,7 @@ export default function Navbar() {
               Daud Abdi
             </span>
             <span className="text-xs font-medium text-slate-400">
-              Software Engineer
+              Data Engineer
             </span>
           </div>
         </a>

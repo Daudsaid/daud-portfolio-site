@@ -7,23 +7,23 @@ interface ExperienceItem {
 
 const experience: ExperienceItem[] = [
   {
-    role: 'Software Engineer (Freelance)', 
-     company: 'Upwork & Indie Clients',
-    period: '2024 — Present',
+    role: 'Data Engineer',
+    company: 'Upwork · Freelance',
+    period: 'Mar 2025 — Present',
     bullets: [
-      'Delivered Go-based APIs, dashboards, and deployment-ready infrastructure guidance for startups.',
-      'Collaborated closely with founders to scope MVPs, iterate quickly, and ship production features.',
-      'Owned delivery end-to-end: architecture, implementation, QA, and documentation.',
+      'Building end-to-end data pipelines for clients: Python ingestion, dbt modelling (SCD Type 2, snapshots, tests), Airflow orchestration, and deployments to Snowflake and PostgreSQL.',
+      'Serverless AWS-native ETL with S3, Glue, Athena, Lambda, and Step Functions.',
+      'Docker throughout.',
     ],
   },
   {
-    role: 'Backend Developer',
-    company: 'Community & Open Source',
-    period: '2025 — now ',
+    role: 'Back End Developer',
+    company: 'Taaj Service · Full-time',
+    period: 'Mar 2023 — Feb 2025',
     bullets: [
-      'Maintained open-source Go services, emphasizing clean architecture and test coverage.',
-      'Mentored peers on Git, Docker, and API best practices through workshops and pair sessions.',
-      'Explored cloud-native tooling to keep deployment pipelines lean and discoverable.',
+      'Built production financial-transaction APIs in Node.js, TypeScript, and NestJS backed by PostgreSQL.',
+      'Owned schema design, idempotency, and auth (JWT/RBAC), with CI/CD via GitHub Actions.',
+      'Working on payment systems is where I learned to treat data quality and schema contracts as origin-point concerns — the foundation of how I now build pipelines.',
     ],
   },
 ];
