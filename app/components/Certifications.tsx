@@ -6,7 +6,7 @@ import { certifications } from '../data/certifications';
 export default function Certifications() {
   return (
     <section id="certifications" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#0F172A] to-[#0A0E1A]">
-      {/* Background effects — mirrors the Skills section */}
+      {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute left-1/4 top-20 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl" />
         <div className="absolute right-1/4 bottom-20 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
@@ -36,7 +36,7 @@ export default function Certifications() {
         </motion.div>
 
         {/* Cards */}
-        <div className="mx-auto flex max-w-2xl flex-col gap-4">
+        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.title}
@@ -44,38 +44,61 @@ export default function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group flex items-center gap-5 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:shadow-2xl hover:shadow-blue-500/10"
             >
-              {/* Icon */}
-              <div className="rounded-2xl border border-blue-400/30 bg-blue-500/10 p-4 text-3xl transition-transform duration-300 group-hover:scale-110">
-                {cert.icon}
-              </div>
+              <div className="p-6">
+                {/* Header row */}
+                <div className="mb-4 flex items-start gap-4">
+                  <div className="rounded-2xl border border-blue-400/30 bg-blue-500/10 p-3 text-3xl transition-transform duration-300 group-hover:scale-110">
+                    {cert.icon}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-blue-300">
+                        {cert.issuer}
+                      </p>
+                      <span className="inline-flex items-center gap-1 rounded-full bg-green-500/15 px-2.5 py-0.5 text-xs font-semibold text-green-400 ring-1 ring-green-500/30">
+                        <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {cert.status}
+                      </span>
+                    </div>
+                    <h3 className="mt-1 text-lg font-bold text-white leading-snug">
+                      {cert.title}
+                    </h3>
+                  </div>
+                </div>
 
-              {/* Text */}
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-blue-300">
-                  {cert.issuer}
+                {/* Blurb */}
+                <p className="mb-4 text-sm leading-relaxed text-slate-400">
+                  {cert.blurb}
                 </p>
-                <h3 className="mt-1 text-lg font-bold text-white">
-                  {cert.title}
-                </h3>
-              </div>
 
-              {/* Checkmark */}
-              <div className="ml-auto flex-shrink-0">
-                <svg
-                  className="h-6 w-6 text-cyan-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                {/* Skill tags */}
+                <div className="mb-5 flex flex-wrap gap-2">
+                  {cert.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* View Certificate link */}
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 px-4 py-2 text-sm font-medium text-white transition-all hover:shadow-lg hover:shadow-blue-500/50"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  View Certificate
+                </a>
               </div>
             </motion.div>
           ))}
