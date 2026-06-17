@@ -41,7 +41,7 @@ export const certifications: Certification[] = [
       'Conflict Resolution',
       'Collaborative Workflows',
     ],
-    link: 'https://www.coursera.org/learn/introduction-to-version-control',
+    link: 'https://www.coursera.org/account/accomplishments/verify/W6IL50TLQHI8',
     icon: '🏅',
   },
 ];
