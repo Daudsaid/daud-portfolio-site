@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiPython, SiTypescript, SiSnowflake, SiPostgresql, SiDocker, SiApacheairflow } from 'react-icons/si';
+import { SiPython, SiSnowflake, SiPostgresql, SiDocker, SiApacheairflow, SiApachekafka } from 'react-icons/si';
 import { IconType } from 'react-icons';
 import ViewCounter from './ViewCounter';
 
@@ -20,7 +20,7 @@ export default function Hero() {
     { icon: SiSnowflake, name: 'Snowflake', color: 'text-cyan-400' },
     { icon: SiPostgresql, name: 'PostgreSQL', color: 'text-blue-300' },
     { icon: SiDocker, name: 'Docker', color: 'text-blue-500' },
-    { icon: SiTypescript, name: 'TypeScript', color: 'text-blue-400' },
+    { icon: SiApachekafka, name: 'Kafka', color: 'text-orange-400' },
   ];
 
   return (
@@ -205,7 +205,7 @@ export default function Hero() {
                       'End-to-end data pipeline development',
                       'dbt modelling, testing & Snowflake deployment',
                       'Airflow orchestration & Docker containerisation',
-                      'Backend APIs & full-stack TypeScript systems',
+                      'Source-aware design: schema contracts and data quality upstream',
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3">
                         <svg

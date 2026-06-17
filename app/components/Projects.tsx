@@ -8,14 +8,13 @@ import { projects } from '../data/projects';
 export default function Projects() {
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Data Engineering', 'Backend'];
+  const categories = ['All', 'Data Engineering'];
 
   const filteredProjects = filter === 'All'
     ? projects
     : projects.filter(p => p.category === filter);
 
   const deCount = projects.filter(p => p.category === 'Data Engineering').length;
-  const backendCount = projects.filter(p => p.category === 'Backend').length;
 
   return (
     <section
@@ -59,10 +58,6 @@ export default function Projects() {
             <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-sm">
               <span className="text-2xl font-bold text-cyan-400">{deCount}</span>
               <span className="ml-2 text-sm text-slate-400">DE Pipelines</span>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-sm">
-              <span className="text-2xl font-bold text-indigo-400">{backendCount}</span>
-              <span className="ml-2 text-sm text-slate-400">Backend Projects</span>
             </div>
           </div>
         </motion.div>

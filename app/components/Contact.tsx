@@ -93,7 +93,7 @@ export default function Contact() {
             Let&apos;s build something together
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-slate-200 sm:text-base">
-            Whether you&apos;re looking for a data engineer or backend engineer for your next product, or
+            Whether you&apos;re looking for a data engineer for your next project, or
             just want to discuss an idea, feel free to reach out. I usually reply within 24 hours.
           </p>
 

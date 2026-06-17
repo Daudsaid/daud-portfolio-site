@@ -8,7 +8,7 @@ export interface Skill {
 export const skills: Skill[] = [
   {
     category: 'Languages',
-    items: ['Python', 'TypeScript', 'SQL'],
+    items: ['Python', 'SQL'],
     icon: '💻',
     color: 'blue',
   },
@@ -31,8 +31,8 @@ export const skills: Skill[] = [
     color: 'purple',
   },
   {
-    category: 'Backend & APIs',
-    items: ['Node.js', 'Express', 'FastAPI', 'REST APIs', 'JWT', 'OAuth 2.0'],
+    category: 'Data Ingestion & APIs',
+    items: ['FastAPI', 'REST APIs'],
     icon: '🔧',
     color: 'green',
   },

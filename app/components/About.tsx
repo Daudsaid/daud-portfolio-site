@@ -11,7 +11,6 @@ interface Highlight {
 
 interface Technologies {
   primary: string[];
-  frontend: string[];
   backend: string[];
   database: string[];
   tools: string[];
@@ -35,15 +34,14 @@ export default function About() {
       icon: '🌬️',
     },
     {
-      title: 'Backend APIs',
-      description: 'Production-grade REST APIs with TypeScript, Node.js, and PostgreSQL',
+      title: 'Data Source Understanding',
+      description: 'Designing for data quality and schema contracts at the source, not just in the warehouse',
       icon: '⚙️',
     },
   ];
 
   const technologies: Technologies = {
-    primary: ['Python', 'TypeScript', 'SQL'],
-    frontend: ['React', 'Next.js', 'Tailwind CSS'],
+    primary: ['Python', 'SQL'],
     backend: ['dbt', 'Apache Airflow', 'Snowflake', 'PostgreSQL', 'REST APIs'],
     database: ['PostgreSQL', 'Snowflake', 'AWS S3'],
     tools: ['Docker', 'Git', 'AWS Glue', 'AWS Athena', 'Parquet'],
@@ -117,9 +115,9 @@ export default function About() {
                   both PostgreSQL and Snowflake.
                 </p>
                 <p className="leading-relaxed">
-                  I bring a full-stack TypeScript/Node.js background to every project — meaning I
-                  understand the systems that produce the data, not just the pipelines that move it.
-                  My approach is hands-on and production-focused: real APIs, real databases, real
+                  My approach is hands-on and production-focused: I understand the systems that
+                  produce the data, not just the pipelines that move it — which means I design for
+                  data quality and schema contracts at the source. Real APIs, real databases, real
                   orchestration, clean architecture.
                 </p>
               </div>
@@ -190,27 +188,10 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Frontend */}
+                {/* Pipeline & Transformation */}
                 <div>
                   <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    Frontend
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {technologies.frontend.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Backend */}
-                <div>
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    Backend & APIs
+                    Pipeline & Transformation
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {technologies.backend.map((tech) => (

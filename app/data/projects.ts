@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "NHS A&E Waiting List Pipeline",
-    description: "End-to-end pipeline ingesting NHS England A&E attendance and waiting time data across 11 months (2,197+ rows). Uses PySpark for transformation, loads into Snowflake, and models with dbt — all orchestrated via Airflow on Docker.",
+    description: "End-to-end pipeline ingesting NHS England A&E attendance and emergency admissions data over 5 years (April 2021 – February 2026), at provider level across NHS Trusts and Foundation Trusts — 11,986 rows from 59 monthly files. Python ingestion (BeautifulSoup/Requests), PySpark transformation into Snowflake, dbt modelling, orchestrated via Airflow on Docker.",
     image: "/api-placeholder.jpg",
     tags: ["Python", "PySpark", "dbt", "Snowflake", "Airflow", "Docker", "BeautifulSoup"],
     github: "https://github.com/Daudsaid/nhs-waitinglist-pipeline",
@@ -99,50 +99,5 @@ export const projects: Project[] = [
     demo: null,
     featured: true,
     category: "Data Engineering"
-  },
-  // ── Backend (not featured) ────────────────────────────────────────────────
-  {
-    id: 9,
-    title: "Payments API with Stripe Integration",
-    description: "Production-ready RESTful API with complete Stripe payment processing, secure webhook handling with SHA-256 signature verification, and comprehensive test coverage (38+ passing tests). Features Payment Intents, customer management, refunds, and CSRF protection.",
-    image: "/api-placeholder.jpg",
-    tags: ["TypeScript", "Express.js", "PostgreSQL", "Stripe", "Jest", "Webhooks"],
-    github: "https://github.com/Daudsaid/payments-api-da-ts",
-    demo: null,
-    featured: false,
-    category: "Backend"
-  },
-  {
-    id: 10,
-    title: "OAuth Login API",
-    description: "Production-ready OAuth authentication API deployed on AWS (EC2 + RDS). Features Google and GitHub login, session management with HttpOnly cookies, CSRF protection, rate limiting, and 24/7 uptime with PM2. Includes 38 passing tests.",
-    image: "/api-placeholder.jpg",
-    tags: ["TypeScript", "Express.js", "PostgreSQL", "OAuth", "Jest", "AWS", "PM2"],
-    github: "https://github.com/Daudsaid/OAuth-Login-API",
-    demo: null,
-    featured: false,
-    category: "Backend"
-  },
-  {
-    id: 11,
-    title: "Advanced Authentication & Authorization API",
-    description: "Production-ready REST API deployed on AWS (EC2 + RDS PostgreSQL). Features JWT authentication, refresh tokens, email verification, password reset, and 24/7 uptime with PM2. Includes comprehensive test coverage with Jest.",
-    image: "/api-placeholder.jpg",
-    tags: ["TypeScript", "Express.js", "PostgreSQL", "JWT", "Jest", "AWS", "PM2"],
-    github: "https://github.com/Daudsaid/authentication-authorization-api",
-    demo: null,
-    featured: false,
-    category: "Backend"
-  },
-  {
-    id: 12,
-    title: "Job Scraper API",
-    description: "FastAPI backend that scrapes London Data Engineering and AI job listings from Reed.co.uk, stores them in PostgreSQL, and exposes a queryable REST API with filters, pagination, and aggregated stats (top companies, locations, salary ranges).",
-    image: "/api-placeholder.jpg",
-    tags: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Docker", "REST API"],
-    github: "https://github.com/Daudsaid/job-scraper-api-bydaud",
-    demo: null,
-    featured: false,
-    category: "Backend"
   },
 ];

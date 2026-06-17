@@ -17,13 +17,13 @@ const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: 'Back End Developer',
-    company: 'Taaj Service · Full-time',
-    period: 'Mar 2023 — Feb 2025',
+    role: 'Database Developer',
+    company: 'Taaj Services · Full-time, Remote',
+    period: 'Oct 2023 — Feb 2025',
     bullets: [
-      'Built production financial-transaction APIs in Node.js, TypeScript, and NestJS backed by PostgreSQL.',
-      'Owned schema design, idempotency, and auth (JWT/RBAC), with CI/CD via GitHub Actions.',
-      'Working on payment systems is where I learned to treat data quality and schema contracts as origin-point concerns — the foundation of how I now build pipelines.',
+      'Maintained PostgreSQL databases supporting money-transfer and financial-transaction systems.',
+      'Wrote and optimised SQL queries and supported data models for transaction processing.',
+      'Contributed to role-based access control (RBAC) and database CI/CD workflows using GitHub Actions.',
     ],
   },
 ];
