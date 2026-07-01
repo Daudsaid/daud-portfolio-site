@@ -66,13 +66,13 @@ export default function Hero() {
               {/* Main heading */}
               <div className="space-y-6">
                 <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-                  <span className="block">Data</span>
+                  <span className="block">Associate Data</span>
                   <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     Engineer
                   </span>
                 </h1>
                 <p className="max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-                  Data Engineer building production pipelines from ingestion to analytics — with a backend engineering background that means I design for data quality and schema contracts at the source, not just in the warehouse.
+                  Associate Data Engineer building ETL pipelines with Python, pandas, and SQL — from raw data ingestion through to clean, tested datasets ready for analytics.
                 </p>
               </div>
 
@@ -170,7 +170,7 @@ export default function Hero() {
                   </div>
                   <div className="text-center">
                     <h3 className="text-2xl font-bold text-white">Daud Abdi</h3>
-                    <p className="text-sm text-slate-300">Data Engineer</p>
+                    <p className="text-sm text-slate-300">Associate Data Engineer</p>
                   </div>
                 </div>
 

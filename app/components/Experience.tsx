@@ -7,23 +7,24 @@ interface ExperienceItem {
 
 const experience: ExperienceItem[] = [
   {
-    role: 'Data Engineer',
+    role: 'Associate Data Engineer',
     company: 'Upwork · Freelance',
     period: 'Mar 2025 — Present',
     bullets: [
-      'Building end-to-end data pipelines for clients: Python ingestion, dbt modelling (SCD Type 2, snapshots, tests), Airflow orchestration, and deployments to Snowflake and PostgreSQL.',
-      'Serverless AWS-native ETL with S3, Glue, Athena, Lambda, and Step Functions.',
-      'Docker throughout.',
+      'Built ETL scripts in Python and pandas to extract, clean, and transform structured and semi-structured datasets.',
+      'Converted raw CSV/JSON exports into Parquet files to reduce storage size and speed up downstream processing.',
+      'Automated data ingestion and transformation workflows, scheduling runs to keep datasets up to date.',
+      'Validated data quality with checks on schema, nulls, and duplicates before loading into target tables.',
     ],
   },
   {
-    role: 'Database Developer',
+    role: 'Money Transfer Agent',
     company: 'Taaj Services · Full-time, Remote',
     period: 'Oct 2023 — Feb 2025',
     bullets: [
-      'Maintained PostgreSQL databases supporting money-transfer and financial-transaction systems.',
-      'Wrote and optimised SQL queries and supported data models for transaction processing.',
-      'Contributed to role-based access control (RBAC) and database CI/CD workflows using GitHub Actions.',
+      'Built Excel reconciliation trackers to validate daily transaction volumes and balances across multiple currency corridors.',
+      'Automated recurring reporting workflows in Excel using formulas, pivot tables, and conditional formatting to cut manual reporting time.',
+      'Cleaned and structured raw transaction exports in Excel ahead of loading into internal systems, improving downstream data accuracy.',
     ],
   },
 ];

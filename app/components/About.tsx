@@ -74,7 +74,7 @@ export default function About() {
             Engineering Data at Scale
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
-            Passionate about building scalable pipelines with clean architecture and production-grade reliability
+            Building a strong foundation in data engineering, one pipeline at a time
           </p>
         </motion.div>
 
@@ -105,14 +105,15 @@ export default function About() {
             {/* Description */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">
-                Data Engineer
+                Associate Data Engineer
               </h3>
               <div className="space-y-4 text-slate-300">
                 <p className="leading-relaxed">
-                  I&apos;m a Data Engineer based in London, building end-to-end data pipelines
-                  and backend systems. My DE work spans Python ingestion scripts, dbt transformations
-                  (SCD Type 2, snapshots, tests), Airflow orchestration, and dual-target deployments to
-                  both PostgreSQL and Snowflake.
+                  I&apos;m an Associate Data Engineer based in London, building ETL pipelines
+                  with Python and pandas — ingesting raw data, cleaning and transforming it, and
+                  converting it into efficient formats like Parquet for downstream use. I&apos;m also
+                  comfortable with dbt, Airflow, and PostgreSQL, and I&apos;m always looking to build
+                  on that foundation.
                 </p>
                 <p className="leading-relaxed">
                   My approach is hands-on and production-focused: I understand the systems that

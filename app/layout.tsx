@@ -4,8 +4,8 @@ import Footer from './components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Daud Abdi | Data Engineer',
-  description: 'Data Engineer building production pipelines from ingestion to analytics — with a backend engineering background that means I design for data quality and schema contracts at the source, not just in the warehouse.',
+  title: 'Daud Abdi | Associate Data Engineer',
+  description: 'Associate Data Engineer building ETL pipelines with Python, pandas, and SQL — from raw data ingestion through to clean, tested datasets ready for analytics.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
