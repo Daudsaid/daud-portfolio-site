@@ -43,7 +43,7 @@ export default function About() {
   const technologies: Technologies = {
     primary: ['Python', 'SQL'],
     backend: ['dbt', 'Apache Airflow', 'Snowflake', 'PostgreSQL', 'REST APIs'],
-    database: ['PostgreSQL', 'Snowflake', 'AWS S3'],
+    database: ['PostgreSQL', 'AWS S3'],
     tools: ['Docker', 'Git', 'AWS Glue', 'AWS Athena', 'Parquet'],
   };
 
