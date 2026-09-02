@@ -4,7 +4,7 @@ export interface Project {
   description: string;
   image: string;
   tags: string[];
-  github: string;
+  github: string | null;
   demo: string | null;
   featured: boolean;
   category: string;
@@ -96,6 +96,80 @@ export const projects: Project[] = [
     image: "/api-placeholder.jpg",
     tags: ["Python", "dbt", "PostgreSQL", "AWS S3", "AWS Glue", "Athena", "Parquet"],
     github: "https://github.com/Daudsaid/uk-crime-pipeline",
+    demo: null,
+    featured: true,
+    category: "Data Engineering"
+  },
+
+  // ── Recent Projects (synced from GitHub, newest first) ────────────────────
+  // NOTE: descriptions below marked "inferred" are the author's own guess from
+  // the repo name, not a confirmed tech-stack/summary — verify before publishing.
+  {
+    id: 9,
+    title: "Premier League Pipeline 26/27",
+    description: "Season 26/27 Premier League data pipeline.",
+    image: "/api-placeholder.jpg",
+    tags: ["Python", "Private"],
+    github: null,
+    demo: null,
+    featured: true,
+    category: "Data Engineering"
+  },
+  {
+    id: 10,
+    title: "Premier League Pipeline",
+    // inferred from repo name — verify
+    description: "Premier League match data pipeline: ingestion, cleaning, and analysis.",
+    image: "/api-placeholder.jpg",
+    tags: ["Python"],
+    github: "https://github.com/Daudsaid/premier-league-pipeline",
+    demo: null,
+    featured: true,
+    category: "Data Engineering"
+  },
+  {
+    id: 11,
+    title: "UK Trade Pipeline",
+    // inferred from repo name — verify
+    description: "ETL and analysis of UK import/export trade data.",
+    image: "/api-placeholder.jpg",
+    tags: ["Jupyter Notebook"],
+    github: "https://github.com/Daudsaid/uk-trade-pipeline",
+    demo: null,
+    featured: true,
+    category: "Data Engineering"
+  },
+  {
+    id: 12,
+    title: "Realtime Flight Tracker",
+    description: "Real-time flight tracking pipeline: OpenSky API → Kafka → Postgres → Streamlit.",
+    image: "/api-placeholder.jpg",
+    tags: ["Python", "OpenSky API", "Kafka", "Postgres", "Streamlit"],
+    github: "https://github.com/Daudsaid/realtime-flight-tracker",
+    demo: null,
+    featured: true,
+    category: "Data Engineering"
+  },
+  {
+    id: 13,
+    title: "NHS A&E ELT",
+    // inferred from repo name — verify
+    description: "ELT pipeline for NHS A&E attendance and waiting-time data.",
+    image: "/api-placeholder.jpg",
+    tags: ["Jupyter Notebook"],
+    github: "https://github.com/Daudsaid/nhs-ae-elt",
+    demo: null,
+    featured: true,
+    category: "Data Engineering"
+  },
+  {
+    id: 14,
+    title: "UK Energy Pipeline",
+    // inferred from repo name — verify
+    description: "Pipeline for UK energy generation and consumption data.",
+    image: "/api-placeholder.jpg",
+    tags: ["Python"],
+    github: "https://github.com/Daudsaid/uk-energy-pipeline",
     demo: null,
     featured: true,
     category: "Data Engineering"
