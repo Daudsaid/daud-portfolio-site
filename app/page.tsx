@@ -6,6 +6,8 @@ import Certifications from './components/Certifications';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 
+export const revalidate = 3600;
+
 export default function HomePage() {
   return (
     <>
