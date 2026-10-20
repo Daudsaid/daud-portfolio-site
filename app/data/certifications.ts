@@ -25,6 +25,8 @@ export const certifications: Certification[] = [
       'Apache Spark',
       'DataOps',
     ],
+    // TODO: replace with the verify URL (coursera.org/account/accomplishments/verify/...);
+    // this currently points at the generic course page, not the credential.
     link: 'https://www.coursera.org/professional-certificates/data-engineering',
     icon: '🎓',
   },

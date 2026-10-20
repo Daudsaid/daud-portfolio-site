@@ -139,6 +139,11 @@ export default function Skills() {
                       </li>
                     ))}
                   </ul>
+                  {skillGroup.practices && (
+                    <p className="mt-4 text-xs text-slate-400">
+                      Practices: {skillGroup.practices.join(' · ')}
+                    </p>
+                  )}
                 </div>
 
                 {/* Bottom accent line */}

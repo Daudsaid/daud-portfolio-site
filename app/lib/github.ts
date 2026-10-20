@@ -48,7 +48,7 @@ function toProject(
     tags: override?.tags ?? fallbackTags,
     github: repo?.html_url ?? `https://github.com/${GITHUB_USERNAME}/${name}`,
     demo: override?.demo !== undefined ? override.demo : repo?.homepage || null,
-    featured: override?.featured ?? true,
+    featured: override?.featured ?? false,
     category: override?.category ?? "Data Engineering",
     pushedAt: repo?.pushed_at,
     order: override?.order ?? Number.POSITIVE_INFINITY,

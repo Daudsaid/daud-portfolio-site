@@ -10,6 +10,8 @@ const experience: ExperienceItem[] = [
     role: 'Associate Data Engineer',
     company: 'Upwork · Freelance',
     period: 'Mar 2025 — Present',
+    // TODO: add one quantified result for the Upwork role (e.g. rows/volume,
+    // runtime or storage reduction, hours saved) — none of these bullets has one.
     bullets: [
       'Built ETL scripts in Python and pandas to extract, clean, and transform structured and semi-structured datasets.',
       'Converted raw CSV/JSON exports into Parquet files to reduce storage size and speed up downstream processing.',
@@ -37,7 +39,7 @@ export default function Experience() {
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-sky-100">
             Experience
           </div>
-          <h2 className="mt-3 text-3xl font-semibold text-slate-100 md:text-4xl">Shipping value across teams & clients</h2>
+          <h2 className="mt-3 text-3xl font-semibold text-slate-100 md:text-4xl">Experience</h2>
           <p className="mt-3 text-sm text-slate-300">
             Production-focused delivery with clean architecture, documentation, and reliability top of mind.
           </p>

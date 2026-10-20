@@ -5,14 +5,23 @@ import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import { getProjects } from './lib/github';
+import { experienceLabel } from './lib/experience';
 
 export const revalidate = 3600;
 
-export default function HomePage() {
+export default async function HomePage() {
+  const projects = await getProjects();
+  const stats = {
+    projects: projects.length,
+    pipelines: projects.filter((p) => p.category === 'Data Engineering').length,
+    experience: experienceLabel(),
+  };
+
   return (
     <>
-      <Hero />
-      <About />
+      <Hero stats={stats} />
+      <About stats={stats} />
       <Projects />
       <Skills />
       <Certifications />

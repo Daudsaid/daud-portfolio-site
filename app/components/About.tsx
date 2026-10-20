@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import type { SiteStats } from './Hero';
 
 interface Highlight {
   title: string;
@@ -16,7 +17,7 @@ interface Technologies {
   tools: string[];
 }
 
-export default function About() {
+export default function About({ stats }: { stats: SiteStats }) {
   const highlights: Highlight[] = [
     {
       title: 'Data Pipeline Development',
@@ -24,9 +25,9 @@ export default function About() {
       icon: '🔄',
     },
     {
-      title: 'dbt & Snowflake',
-      description: 'SCD Type 2 snapshots, dbt models and tests, dual-target deployments',
-      icon: '❄️',
+      title: 'dbt Modelling & Testing',
+      description: 'SCD Type 2 snapshots, dbt models and tests, including custom data tests',
+      icon: '🧪',
     },
     {
       title: 'Airflow Orchestration',
@@ -42,9 +43,9 @@ export default function About() {
 
   const technologies: Technologies = {
     primary: ['Python', 'SQL'],
-    backend: ['dbt', 'Apache Airflow', 'Snowflake', 'PostgreSQL', 'REST APIs'],
-    database: ['PostgreSQL', 'AWS S3'],
-    tools: ['Docker', 'Git', 'AWS Glue', 'AWS Athena', 'Parquet'],
+    backend: ['dbt', 'Apache Airflow', 'PostgreSQL', 'REST APIs'],
+    database: ['PostgreSQL'],
+    tools: ['Docker', 'Git', 'Parquet'],
   };
 
   return (
@@ -126,11 +127,11 @@ export default function About() {
               {/* Quick stats */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                  <p className="text-3xl font-bold text-blue-400">12</p>
+                  <p className="text-3xl font-bold text-blue-400">{stats.projects}</p>
                   <p className="text-sm text-slate-400">Projects</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                  <p className="text-3xl font-bold text-cyan-400">2 Yrs</p>
+                  <p className="text-3xl font-bold text-cyan-400">{stats.experience}</p>
                   <p className="text-sm text-slate-400">Experience</p>
                 </div>
               </div>
@@ -209,7 +210,7 @@ export default function About() {
                 {/* Database & Tools */}
                 <div>
                   <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    Database & Cloud
+                    Database & Tools
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {[...technologies.database, ...technologies.tools].map((tech) => (

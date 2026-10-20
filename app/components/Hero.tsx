@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiPython, SiSnowflake, SiPostgresql, SiDocker, SiApacheairflow, SiApachekafka } from 'react-icons/si';
+import { SiPython, SiPostgresql, SiDocker, SiApacheairflow, SiApachekafka } from 'react-icons/si';
 import { IconType } from 'react-icons';
 import ViewCounter from './ViewCounter';
 
@@ -13,11 +13,16 @@ interface TechItem {
   color: string;
 }
 
-export default function Hero() {
+export interface SiteStats {
+  projects: number;
+  pipelines: number;
+  experience: string;
+}
+
+export default function Hero({ stats }: { stats: SiteStats }) {
   const techStack: TechItem[] = [
     { icon: SiPython, name: 'Python', color: 'text-yellow-400' },
     { icon: SiApacheairflow, name: 'Airflow', color: 'text-green-400' },
-    { icon: SiSnowflake, name: 'Snowflake', color: 'text-cyan-400' },
     { icon: SiPostgresql, name: 'PostgreSQL', color: 'text-blue-300' },
     { icon: SiDocker, name: 'Docker', color: 'text-blue-500' },
     { icon: SiApachekafka, name: 'Kafka', color: 'text-orange-400' },
@@ -66,7 +71,7 @@ export default function Hero() {
               {/* Main heading */}
               <div className="space-y-6">
                 <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-                  <span className="block">Associate Data</span>
+                  <span className="block">Associate Data</span>{' '}
                   <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     Engineer
                   </span>
@@ -177,9 +182,9 @@ export default function Hero() {
                 {/* Stats grid */}
                 <div className="mb-6 grid grid-cols-3 gap-4">
                   {[
-                    { label: 'Projects', value: '12', icon: '🚀' },
-                    { label: 'DE Pipelines', value: '8', icon: '⚡' },
-                    { label: 'Experience', value: '2 Yrs', icon: '🛠️' },
+                    { label: 'Projects', value: String(stats.projects), icon: '🚀' },
+                    { label: 'DE Pipelines', value: String(stats.pipelines), icon: '⚡' },
+                    { label: 'Experience', value: stats.experience, icon: '🛠️' },
                   ].map((stat) => (
                     <div
                       key={stat.label}
@@ -203,7 +208,7 @@ export default function Hero() {
                   <div className="space-y-3">
                     {[
                       'End-to-end data pipeline development',
-                      'dbt modelling, testing & Snowflake deployment',
+                      'dbt modelling & testing with SCD Type 2 snapshots',
                       'Airflow orchestration & Docker containerisation',
                       'Source-aware design: schema contracts and data quality upstream',
                     ].map((item) => (
