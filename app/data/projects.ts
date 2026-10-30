@@ -82,20 +82,26 @@ export const projectOverrides: Record<string, ProjectOverride> = {
     description: "ELT over 5.36M HM Land Registry transactions (2021–2026) into a Kimball star schema with 22 dbt tests, including relationships tests on every foreign key. Duplicate source IDs are resolved with window functions, and fixing a slow client-side COPY cut a 3+ minute bulk load to ~1.3 seconds.",
     tags: ["Python", "PostgreSQL", "dbt", "Polars", "Docker"],
   },
-  "realtime-flight-tracker": {
+  "uk-trade-pipeline": {
     order: 8,
+    title: "UK Trade Pipeline",
+    description: "ELT pipeline that ingests UK international trade statistics (Overseas Trade Statistics / OTS) from HMRC's public API — 2.6M rows — lands them raw in Postgres, and models them into a star schema with 33 dbt tests.",
+    tags: ["Python", "PostgreSQL", "dbt", "Docker", "GitHub Actions"],
+  },
+  "realtime-flight-tracker": {
+    order: 9,
     title: "Live Flight Tracker",
     description: "Real-time flight tracking pipeline: OpenSky API → Kafka (KRaft mode) → PostgreSQL → Streamlit map.",
     tags: ["Python", "OpenSky API", "Apache Kafka", "PostgreSQL", "Streamlit"],
   },
   "uk-energy-pipeline": {
-    order: 9,
+    order: 10,
     title: "UK Energy Pipeline",
     description: "An end-to-end data pipeline that ingests live UK electricity generation and regional carbon intensity data, models it into a dimensional warehouse using dbt, and orchestrates ingestion with Airflow.",
     tags: ["Python", "Airflow", "PostgreSQL", "dbt", "Metabase", "Docker"],
   },
   "daud-chatbot": {
-    order: 10,
+    order: 11,
     title: "Daud Chatbot",
     category: "AI / Apps",
     description: "Streaming AI chatbot built in pure Python with Streamlit and SQLite: multiple chats, custom personalities, switchable OpenAI-compatible providers (Gemini, Ollama, OpenAI), and a rate-limited public demo.",
