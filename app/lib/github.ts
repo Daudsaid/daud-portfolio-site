@@ -14,6 +14,7 @@ interface GitHubRepo {
   language: string | null;
   topics?: string[];
   fork: boolean;
+  private: boolean;
   archived: boolean;
   pushed_at: string;
 }
@@ -64,7 +65,7 @@ async function fetchRepos(): Promise<GitHubRepo[]> {
   }
   const res = await fetch(
     `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=pushed&type=owner`,
-    { headers, next: { revalidate: 3600 } }
+    { headers, next: { revalidate: 60 } }
   );
   if (!res.ok) throw new Error(`GitHub API responded ${res.status}`);
   return res.json();
@@ -76,7 +77,7 @@ export async function getProjects(): Promise<Project[]> {
   try {
     const repos = await fetchRepos();
     items = repos
-      .filter((r) => !r.fork && !r.archived && !hiddenRepos.includes(r.name))
+      .filter((r) => !r.private && !r.fork && !r.archived && !hiddenRepos.includes(r.name))
       .filter((r) => r.name in projectOverrides || r.topics?.includes("portfolio"))
       .map((r) => toProject(r.name, r, projectOverrides[r.name]));
   } catch {

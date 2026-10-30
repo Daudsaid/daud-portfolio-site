@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 import { getProjects } from './lib/github';
 import { experienceLabel } from './lib/experience';
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export default async function HomePage() {
   const projects = await getProjects();
