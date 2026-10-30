@@ -2,9 +2,8 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  image: string;
   tags: string[];
-  github: string | null;
+  github: string;
   demo: string | null;
   featured: boolean;
   category: string;

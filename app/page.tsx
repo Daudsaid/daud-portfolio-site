@@ -22,7 +22,7 @@ export default async function HomePage() {
     <>
       <Hero stats={stats} />
       <About stats={stats} />
-      <Projects />
+      <Projects projects={projects} />
       <Skills />
       <Certifications />
       <Experience />

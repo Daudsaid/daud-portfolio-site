@@ -8,6 +8,7 @@ interface ColorClasses {
   bg: string;
   text: string;
   glow: string;
+  via: string;
 }
 
 const colorClasses: Record<string, ColorClasses> = {
@@ -16,36 +17,42 @@ const colorClasses: Record<string, ColorClasses> = {
     bg: 'bg-blue-500/10',
     text: 'text-blue-400',
     glow: 'hover:shadow-blue-500/20',
+    via: 'via-blue-500',
   },
   cyan: {
     border: 'border-cyan-400/30',
     bg: 'bg-cyan-500/10',
     text: 'text-cyan-400',
     glow: 'hover:shadow-cyan-500/20',
+    via: 'via-cyan-500',
   },
   indigo: {
     border: 'border-indigo-400/30',
     bg: 'bg-indigo-500/10',
     text: 'text-indigo-400',
     glow: 'hover:shadow-indigo-500/20',
+    via: 'via-indigo-500',
   },
   purple: {
     border: 'border-purple-400/30',
     bg: 'bg-purple-500/10',
     text: 'text-purple-400',
     glow: 'hover:shadow-purple-500/20',
+    via: 'via-purple-500',
   },
   green: {
     border: 'border-green-400/30',
     bg: 'bg-green-500/10',
     text: 'text-green-400',
     glow: 'hover:shadow-green-500/20',
+    via: 'via-green-500',
   },
   orange: {
     border: 'border-orange-400/30',
     bg: 'bg-orange-500/10',
     text: 'text-orange-400',
     glow: 'hover:shadow-orange-500/20',
+    via: 'via-orange-500',
   },
 };
 
@@ -147,7 +154,7 @@ export default function Skills() {
                 </div>
 
                 {/* Bottom accent line */}
-                <div className={`h-1 w-full bg-gradient-to-r from-transparent via-${skillGroup.color}-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
+                <div className={`h-1 w-full bg-gradient-to-r from-transparent ${colors.via} to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100`} />
               </motion.div>
             );
           })}

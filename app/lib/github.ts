@@ -45,7 +45,6 @@ function toProject(
   return {
     title: override?.title ?? titleFromName(name),
     description: override?.description ?? repo?.description ?? "",
-    image: "/api-placeholder.jpg",
     tags: override?.tags ?? fallbackTags,
     github: repo?.html_url ?? `https://github.com/${GITHUB_USERNAME}/${name}`,
     demo: override?.demo !== undefined ? override.demo : repo?.homepage || null,

@@ -63,6 +63,8 @@ export default function Contact() {
       if (res.ok) {
         setSubmitted(true);
         setForm({ name: '', email: '', message: '' });
+      } else if (res.status === 429) {
+        setError('Too many messages from your connection. Please try again later or email me directly.');
       } else {
         setError('Something went wrong. Please email me directly.');
       }
@@ -131,6 +133,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   autoComplete="name"
+                  maxLength={100}
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Jane Doe"
@@ -147,6 +150,7 @@ export default function Contact() {
                   name="email"
                   type="email"
                   autoComplete="email"
+                  maxLength={254}
                   value={form.email}
                   onChange={handleChange}
                   placeholder="you@example.com"
@@ -165,7 +169,8 @@ export default function Contact() {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Share a bit about your project, timeline, and how I can help."
+                placeholder="Tell me about the role, or anything you'd like to discuss."
+                maxLength={5000}
                 rows={5}
                 className="mt-2 w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white shadow-sm outline-none transition placeholder:text-slate-200/60 focus:border-sky-300 focus:ring-2 focus:ring-sky-100/60"
                 required

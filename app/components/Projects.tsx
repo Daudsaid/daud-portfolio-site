@@ -1,7 +1,6 @@
-import { getProjects } from '../lib/github';
+import type { Project } from '../data/projects';
 import ProjectsSection from './ProjectsSection';
 
-export default async function Projects() {
-  const projects = await getProjects();
+export default function Projects({ projects }: { projects: Project[] }) {
   return <ProjectsSection projects={projects} />;
 }
