@@ -7,26 +7,26 @@ interface ExperienceItem {
 
 const experience: ExperienceItem[] = [
   {
-    role: 'Associate Data Engineer',
-    company: 'Upwork · Freelance',
+    role: 'Freelance Data Engineer',
+    company: 'Upwork',
     period: 'Mar 2025 — Present',
     // TODO: add one quantified result for the Upwork role (e.g. rows/volume,
     // runtime or storage reduction, hours saved) — none of these bullets has one.
     bullets: [
-      'Built ETL scripts in Python and pandas to extract, clean, and transform structured and semi-structured datasets.',
-      'Converted raw CSV/JSON exports into Parquet files to reduce storage size and speed up downstream processing.',
-      'Automated data ingestion and transformation workflows, scheduling runs to keep datasets up to date.',
-      'Validated data quality with checks on schema, nulls, and duplicates before loading into target tables.',
+      'Build Python and pandas ETL that extracts, cleans and transforms client CSV and JSON exports, including semi-structured data.',
+      'Convert raw exports to Parquet, cutting storage size and speeding up downstream processing.',
+      'Schedule ingestion and transformation runs so client datasets stay current without manual steps.',
+      'Check schema, nulls and duplicates before every load, so bad records are caught before they reach target tables.',
     ],
   },
   {
-    role: 'Money Transfer Agent',
+    role: 'Operations & Data Assistant',
     company: 'Taaj Services · Full-time, Remote',
     period: 'Oct 2023 — Feb 2025',
     bullets: [
-      'Built Excel reconciliation trackers to validate daily transaction volumes and balances across multiple currency corridors.',
-      'Automated recurring reporting workflows in Excel using formulas, pivot tables, and conditional formatting to cut manual reporting time.',
-      'Cleaned and structured raw transaction exports in Excel ahead of loading into internal systems, improving downstream data accuracy.',
+      'Moved daily reconciliation tracking from Excel into a PostgreSQL database I set up, using SQL to reconcile transaction volumes and balances across multiple currency corridors.',
+      'Cleaned and validated raw transaction exports (duplicates, missing fields, inconsistent formats) before loading, improving downstream accuracy.',
+      'Automated recurring reports with Excel formulas and pivot tables on top of the reconciled data, cutting manual reporting time.',
     ],
   },
 ];

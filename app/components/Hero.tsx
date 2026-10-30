@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiPython, SiPostgresql, SiDocker, SiApacheairflow, SiApachekafka } from 'react-icons/si';
+import { SiPython, SiApachespark, SiApachekafka, SiDbt, SiApacheairflow, SiPostgresql, SiDocker } from 'react-icons/si';
 import { IconType } from 'react-icons';
 import ViewCounter from './ViewCounter';
 
@@ -22,10 +22,12 @@ export interface SiteStats {
 export default function Hero({ stats }: { stats: SiteStats }) {
   const techStack: TechItem[] = [
     { icon: SiPython, name: 'Python', color: 'text-yellow-400' },
+    { icon: SiApachespark, name: 'PySpark', color: 'text-orange-500' },
+    { icon: SiApachekafka, name: 'Kafka', color: 'text-slate-200' },
+    { icon: SiDbt, name: 'dbt', color: 'text-orange-400' },
     { icon: SiApacheairflow, name: 'Airflow', color: 'text-green-400' },
     { icon: SiPostgresql, name: 'PostgreSQL', color: 'text-blue-300' },
     { icon: SiDocker, name: 'Docker', color: 'text-blue-500' },
-    { icon: SiApachekafka, name: 'Kafka', color: 'text-orange-400' },
   ];
 
   return (
@@ -77,7 +79,7 @@ export default function Hero({ stats }: { stats: SiteStats }) {
                   </span>
                 </h1>
                 <p className="max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-                  Associate Data Engineer building ETL pipelines with Python, pandas, and SQL — from raw data ingestion through to clean, tested datasets ready for analytics.
+                  I build batch and streaming pipelines end to end, then prove they&apos;re correct — reconciled row counts, quarantined bad data and automated tests in CI. Python, SQL, dbt, Airflow, Kafka, PySpark and Delta Lake on real UK and market data.
                 </p>
               </div>
 
@@ -207,10 +209,10 @@ export default function Hero({ stats }: { stats: SiteStats }) {
                   </div>
                   <div className="space-y-3">
                     {[
-                      'End-to-end data pipeline development',
-                      'dbt modelling & testing with SCD Type 2 snapshots',
-                      'Airflow orchestration & Docker containerisation',
-                      'Source-aware design: schema contracts and data quality upstream',
+                      'Batch & streaming pipelines with Kafka, PySpark and Delta Lake',
+                      'dbt modelling & testing with Kimball star schemas',
+                      'Data quality: reconciliation, quarantine and data contracts',
+                      'Airflow orchestration, Docker and GitHub Actions CI',
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3">
                         <svg

@@ -20,8 +20,8 @@ interface Technologies {
 export default function About({ stats }: { stats: SiteStats }) {
   const highlights: Highlight[] = [
     {
-      title: 'Data Pipeline Development',
-      description: 'End-to-end pipelines from ingestion to analytics with Python & dbt',
+      title: 'Batch & Streaming Pipelines',
+      description: 'Kafka, Spark Structured Streaming and Delta Lake medallions, from ingestion to dashboards',
       icon: '🔄',
     },
     {
@@ -30,22 +30,22 @@ export default function About({ stats }: { stats: SiteStats }) {
       icon: '🧪',
     },
     {
-      title: 'Airflow Orchestration',
-      description: 'DAG-based pipeline orchestration with Docker Compose deployments',
+      title: 'Orchestration & CI',
+      description: 'Airflow DAGs and scheduled GitHub Actions runs, with every pipeline tested in CI',
       icon: '🌬️',
     },
     {
-      title: 'Data Source Understanding',
-      description: 'Designing for data quality and schema contracts at the source, not just in the warehouse',
-      icon: '⚙️',
+      title: 'Provable Data Quality',
+      description: 'Row-count reconciliation, quarantine and dead-letter queues, and data contracts at the source',
+      icon: '✅',
     },
   ];
 
   const technologies: Technologies = {
     primary: ['Python', 'SQL'],
-    backend: ['dbt', 'Apache Airflow', 'PostgreSQL', 'REST APIs'],
-    database: ['PostgreSQL'],
-    tools: ['Docker', 'Git', 'Parquet'],
+    backend: ['PySpark', 'Apache Kafka', 'dbt', 'Apache Airflow', 'Delta Lake', 'Polars'],
+    database: ['PostgreSQL', 'DuckDB'],
+    tools: ['Docker', 'GitHub Actions', 'Git', 'Parquet', 'Streamlit'],
   };
 
   return (
@@ -110,17 +110,17 @@ export default function About({ stats }: { stats: SiteStats }) {
               </h3>
               <div className="space-y-4 text-slate-300">
                 <p className="leading-relaxed">
-                  I&apos;m an Associate Data Engineer based in London, building ETL pipelines
-                  with Python and pandas — ingesting raw data, cleaning and transforming it, and
-                  converting it into efficient formats like Parquet for downstream use. I&apos;m also
-                  comfortable with dbt, Airflow, and PostgreSQL, and I&apos;m always looking to build
-                  on that foundation.
+                  I&apos;m an Associate Data Engineer based in London who builds batch and streaming
+                  pipelines end to end, then proves they&apos;re correct. My public projects run on real
+                  UK and market data — police.uk, TfL, NHS England, HM Land Registry, OFAC/FCDO
+                  sanctions and Binance — using Python, SQL, dbt, Airflow, Kafka, PySpark and Delta
+                  Lake. Alongside them, I build Python ETL for clients as a freelancer on Upwork.
                 </p>
                 <p className="leading-relaxed">
-                  My approach is hands-on and production-focused: I understand the systems that
-                  produce the data, not just the pipelines that move it — which means I design for
-                  data quality and schema contracts at the source. Real APIs, real databases, real
-                  orchestration, clean architecture.
+                  Every pipeline I build reconciles its row counts, quarantines bad data instead of
+                  dropping it, and ships with automated tests and CI. I understand the systems that
+                  produce the data, not just the pipelines that move it, so I design for data quality
+                  and schema contracts at the source.
                 </p>
               </div>
 

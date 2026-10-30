@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Daud Abdi | Associate Data Engineer',
-  description: 'Associate Data Engineer building ETL pipelines with Python, pandas, and SQL — from raw data ingestion through to clean, tested datasets ready for analytics.',
+  description: 'Associate Data Engineer in London building batch and streaming pipelines with Python, SQL, dbt, Airflow, Kafka, PySpark and Delta Lake — reconciled, tested and shipped with CI.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

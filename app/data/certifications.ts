@@ -25,25 +25,23 @@ export const certifications: Certification[] = [
       'Apache Spark',
       'DataOps',
     ],
-    // TODO: replace with the verify URL (coursera.org/account/accomplishments/verify/...);
-    // this currently points at the generic course page, not the credential.
-    link: 'https://www.coursera.org/professional-certificates/data-engineering',
+    link: 'https://www.coursera.org/account/accomplishments/specialization/9PDRIQU7DF37',
     icon: '🎓',
   },
   {
-    title: 'Version Control (Git & GitHub)',
+    title: 'Front-End Developer Professional Certificate',
     issuer: 'Meta',
     status: 'Completed',
     blurb:
-      'Git and GitHub fundamentals for collaborative software development — local repositories, commits, branching and merging, conflict resolution, and team workflows using remote repositories and pull requests.',
+      'A multi-course program covering JavaScript, React, HTML/CSS and UX principles, plus version control with Git and GitHub — local repositories, branching and merging, conflict resolution and pull-request workflows.',
     tags: [
-      'Git',
-      'GitHub',
-      'Branching & Merging',
-      'Conflict Resolution',
-      'Collaborative Workflows',
+      'JavaScript',
+      'React',
+      'HTML/CSS',
+      'UX Principles',
+      'Git & GitHub',
     ],
-    link: 'https://www.coursera.org/account/accomplishments/verify/W6IL50TLQHI8',
+    link: 'https://www.coursera.org/account/accomplishments/specialization/OXYUUK255UIO',
     icon: '🏅',
   },
 ];
